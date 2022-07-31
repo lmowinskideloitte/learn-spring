@@ -1,8 +1,8 @@
 package com.deloitte.learnspring.game;
 
 public class GameRunner {
-    private Warframe game;
-    public GameRunner(Warframe game) {
+    private GamingConsole game;
+    public GameRunner(GamingConsole game) {
         this.game = game;
     }
 
