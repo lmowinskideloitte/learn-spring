@@ -1,20 +1,22 @@
 package com.deloitte.learnspring;
 
 import com.deloitte.learnspring.game.GameRunner;
-import com.deloitte.learnspring.game.Warframe;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
 public class LearnSpringApplication {
 
     public static void main(String[] args) {
 
-//        SpringApplication.run(LearnSpringApplication.class, args);
+        ConfigurableApplicationContext context = SpringApplication.run(LearnSpringApplication.class, args);
 
-//        Minecraft mc = new Minecraft();
-        Warframe wf = new Warframe();
+        GameRunner runner = context.getBean(GameRunner.class);
 
-        GameRunner runner = new GameRunner(wf);
+////        Minecraft mc = new Minecraft();
+//        Warframe wf = new Warframe();
+//        GameRunner runner = new GameRunner(wf);
 
         runner.runGame();
     }

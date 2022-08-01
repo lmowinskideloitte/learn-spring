@@ -1,5 +1,8 @@
 package com.deloitte.learnspring.game;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Minecraft implements GamingConsole {
 
     @Override
